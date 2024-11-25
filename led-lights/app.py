@@ -1,4 +1,3 @@
-
 from flask import Flask
 import RPi.GPIO as GPIO
 
