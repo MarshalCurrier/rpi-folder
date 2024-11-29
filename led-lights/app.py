@@ -1,7 +1,7 @@
 from flask import Flask
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
+# GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
 
 app = Flask(__name__)
@@ -12,12 +12,14 @@ def home():
 
 @app.route('/off')
 def off():
+    GPIO.setmode(GPIO.BCM)
     GPIO.output(18, GPIO.LOW)
     GPIO.cleanup()
     return 'light off'
 
 @app.route('/on')
 def on():
+    GPIO.setmode(GPIO.BCM)
     GPIO.output(18, GPIO.HIGH)
     return 'light on'
 
