@@ -3,15 +3,53 @@
 {% block content %}
     <h1>Hello World!</h1>
     <h2>Welcome to FlaskApp!</h2>
-    <button type="button" class="btn btn-primary" onclick="ledState(0)">On</button>
-    <button type="button" class="btn btn-primary" onclick="ledState(1)">Off</button>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">White LED</h5>
+                    <button type="button" class="btn btn-primary" onclick="whiteLedState(0)">On</button>
+                    <button type="button" class="btn btn-primary" onclick="whiteLedState(1)">Off</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Red LED</h5>
+                    <button type="button" class="btn btn-primary" onclick="redLedState(0)">On</button>
+                    <button type="button" class="btn btn-primary" onclick="redLedState(1)">Off</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <script>
-    function ledState(state) {
+    function whiteLedState(state) {
         if (state) {
-            state = "/off"
+            state = "/white/off"
         }else{
-            state = "/on"
+            state = "/white/on"
+        }
+        fetch(state, {
+            method: "POST",
+            body: JSON.stringify({
+            userId: 1,
+            title: "Fix my bugs",
+            completed: false
+            }),
+            headers: {
+            "Content-type": "application/json; charset=UTF-8"
+            }
+        });
+    }
+    function redLedState(state) {
+        if (state) {
+            state = "/red/off"
+        }else{
+            state = "/red/on"
         }
         fetch(state, {
             method: "POST",
