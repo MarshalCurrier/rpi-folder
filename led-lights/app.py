@@ -20,7 +20,7 @@ def off():
     GPIO.output(18, GPIO.LOW)
     return 'light off'
 
-@app.route('/on')
+@app.route('/on', methods=['POST'])
 def on():
     GPIO.output(18, GPIO.HIGH)
     return 'light on'
