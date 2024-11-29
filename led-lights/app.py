@@ -3,6 +3,7 @@ import RPi.GPIO as GPIO
 
 
 GPIO.cleanup()
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
