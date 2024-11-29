@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Home'
+    return render_template('base.html', name='RPi')
 
 @app.route('/off')
 def off():
