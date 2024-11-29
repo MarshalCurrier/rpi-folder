@@ -8,7 +8,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('base.html', name='RPi')
+
+    return render_template('index.html', 
+                           name='RPi',
+                           title='LED Lights')
 
 @app.route('/off')
 def off():
