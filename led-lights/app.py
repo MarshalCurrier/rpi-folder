@@ -12,14 +12,11 @@ def home():
 
 @app.route('/off')
 def off():
-    GPIO.setmode(GPIO.BCM)
     GPIO.output(18, GPIO.LOW)
-    GPIO.cleanup()
     return 'light off'
 
 @app.route('/on')
 def on():
-    GPIO.setmode(GPIO.BCM)
     GPIO.output(18, GPIO.HIGH)
     return 'light on'
 
