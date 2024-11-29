@@ -15,7 +15,7 @@ def home():
                            app_name = app_name,
                            page_title = page_title)
 
-@app.route('/off')
+@app.route('/off', methods=['POST'])
 def off():
     GPIO.output(18, GPIO.LOW)
     return 'light off'
