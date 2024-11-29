@@ -3,15 +3,15 @@
 {% block content %}
     <h1>Hello World!</h1>
     <h2>Welcome to FlaskApp!</h2>
-    <button type="button" class="btn btn-primary" onclick="ledOn(0)">on</button>
-    <button type="button" class="btn btn-primary" onclick="ledOn(1)">Primary</button>
+    <button type="button" class="btn btn-primary" onclick="ledState(0)">On</button>
+    <button type="button" class="btn btn-primary" onclick="ledState(1)">Off</button>
 
 <script>
-    function ledOn(state) {
+    function ledState(state) {
         if (state) {
-            state = "/on"
-        }else{
             state = "/off"
+        }else{
+            state = "/on"
         }
         fetch(state, {
             method: "POST",
