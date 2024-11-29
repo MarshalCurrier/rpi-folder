@@ -6,12 +6,14 @@ GPIO.setup(18, GPIO.OUT)
 
 app = Flask(__name__)
 
+app_name = 'LED Lights'
+
 @app.route('/')
 def home():
-
+    page_title = 'LED Lights'
     return render_template('index.html', 
-                           name='RPi',
-                           title='LED Lights')
+                           app_name = app_name,
+                           page_title = page_title)
 
 @app.route('/off')
 def off():
