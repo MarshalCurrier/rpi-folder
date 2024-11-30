@@ -15,13 +15,10 @@ app.debug = True
 
 red_light_pin = 17
 white_light_pin = 18
-print(f"Status of input red_light: {bool(GPIO.input(red_light_pin))}")
-print(f"Status of input white_light: {bool(GPIO.input(white_light_pin))}")
 
 app_name = 'LED Lights'
 
 def on_off(pin_number):
-    # bool(GPIO.input(pin_number))
     if bool(GPIO.input(pin_number)):
         return "on"
     else:
