@@ -23,20 +23,29 @@ def home():
 
 @app.route('/<light>/<status>', methods=['POST'])
 def light_status(light, status):
-    if light == 'white':
-        if status == 'on':
-            GPIO.output(18, GPIO.HIGH)
-            return 'white light on'
-        elif status == 'off':
-            GPIO.output(18, GPIO.LOW)
-            return 'white light off'
-    elif light == 'red':
-        if status == 'on':
-            GPIO.output(17, GPIO.HIGH)
-            return 'red light on'
-        elif status == 'off':
-            GPIO.output(17, GPIO.LOW)
-            return 'red light off'
+    if light == "white":
+        light = 18
+    elif light == "red":
+        light = 17
+    if status == "on":
+        status = GPIO.HIGH
+    elif status == "off":
+        status = GPIO.LOW
+    GPIO.output(light, status)  
+    # if light == 'white':
+    #     if status == 'on':
+    #         GPIO.output(18, GPIO.HIGH)
+    #         return 'white light on'
+    #     elif status == 'off':
+    #         GPIO.output(18, GPIO.LOW)
+    #         return 'white light off'
+    # elif light == 'red':
+    #     if status == 'on':
+    #         GPIO.output(17, GPIO.HIGH)
+    #         return 'red light on'
+    #     elif status == 'off':
+    #         GPIO.output(17, GPIO.LOW)
+    #         return 'red light off'
     else:
         return 'Invalid light'
     GPIO.output(18, GPIO.LOW)
