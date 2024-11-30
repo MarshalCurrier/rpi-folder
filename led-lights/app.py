@@ -3,7 +3,8 @@ import RPi.GPIO as GPIO
 
 
 # GPIO.cleanup()
-# testing some other junk
+
+print(GPIO.)
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
@@ -20,7 +21,6 @@ def home():
     return render_template('index.html', 
                            app_name = app_name,
                            page_title = page_title)
-
 
 @app.route('/<light>/<status>', methods=['POST'])
 def light_status(light, status):
