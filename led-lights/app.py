@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import RPi.GPIO as GPIO
 
 
-GPIO.cleanup()
+# GPIO.cleanup()
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
