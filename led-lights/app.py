@@ -9,6 +9,7 @@ GPIO.setup(18, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
 
 app = Flask(__name__)
+app.debug = True
 
 app_name = 'LED Lights'
 
