@@ -4,8 +4,6 @@ GPIO.setwarnings(False)
 
 
 # GPIO.cleanup()
-print(GPIO.RPI_INFO)
-
 # print(GPIO.RPI_INFO)
 
 GPIO.setmode(GPIO.BCM)
@@ -22,10 +20,14 @@ app_name = 'LED Lights'
 
 @app.route('/')
 def home():
+    red_light_status = bool(GPIO.input(17))
+    white_light_status = bool(GPIO.input(18))
     page_title = 'LED Lights'
     return render_template('index.html', 
-                           app_name = app_name,
-                           page_title = page_title)
+                            red_light_status = red_light_status,
+                            white_light_status = white_light_status,
+                            app_name = app_name,
+                            page_title = page_title)
 
 @app.route('/<light>/<status>', methods=['POST'])
 def light_status(light, status):
