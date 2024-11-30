@@ -46,9 +46,8 @@ def light_status(light, status):
     #     elif status == 'off':
     #         GPIO.output(17, GPIO.LOW)
     #         return 'red light off'
-    else:
-        return 'Invalid light'
-    GPIO.output(18, GPIO.LOW)
+    # else:
+    #     return 'Invalid light'
     return 'ok'
 
 if __name__ == '__main__':
