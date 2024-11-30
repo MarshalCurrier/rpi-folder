@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Hello World!</h1>
-    <h2>Welcome to FlaskApp!</h2>
-    <div class="row">
+    <div class="row text-center">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
@@ -13,25 +11,12 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Red LED</h5>
                     <button type="button" class="btn btn-primary" onclick="led_call('red','on')">On</button>
                     <button type="button" class="btn btn-primary" onclick="led_call('red','off')">Off</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Test LED</h5>
-                    <button type="button" class="btn btn-primary" onclick="led_call('white','on')" disabled>On</button>
-                    <button type="button" class="btn btn-primary" onclick="led_call('white','off')" disabled>Off</button>
                 </div>
             </div>
         </div>
