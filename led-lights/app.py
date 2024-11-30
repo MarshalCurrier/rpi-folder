@@ -1,10 +1,11 @@
 from flask import Flask, render_template
 import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
 
 
 # GPIO.cleanup()
 
-print(GPIO.RPI_INFO)
+# print(GPIO.RPI_INFO)
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
