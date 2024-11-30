@@ -4,6 +4,7 @@ GPIO.setwarnings(False)
 
 
 # GPIO.cleanup()
+print(GPIO.RPI_INFO)
 
 # print(GPIO.RPI_INFO)
 
