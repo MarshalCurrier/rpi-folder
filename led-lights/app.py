@@ -13,7 +13,7 @@ GPIO.setup(17, GPIO.OUT)
 app = Flask(__name__)
 app.debug = True
 
-print(f"Status of input 17: {GPIO.input(17)}")
+print(f"Status of input 17: {bool(GPIO.input(17))}")
 
 app_name = 'LED Lights'
 
