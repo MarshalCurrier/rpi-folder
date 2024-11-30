@@ -8,8 +8,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">White LED</h5>
-                    <button type="button" class="btn btn-primary" onclick="whiteLedState(0)">On</button>
-                    <button type="button" class="btn btn-primary" onclick="whiteLedState(1)">Off</button>
+                    <button type="button" class="btn btn-primary" onclick="led_call('white','on')">On</button>
+                    <button type="button" class="btn btn-primary" onclick="led_call('white','off')">Off</button>
                 </div>
             </div>
         </div>
@@ -19,8 +19,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Red LED</h5>
-                    <button type="button" class="btn btn-primary" onclick="redLedState(0)">On</button>
-                    <button type="button" class="btn btn-primary" onclick="redLedState(1)">Off</button>
+                    <button type="button" class="btn btn-primary" onclick="led_call('red','on')">On</button>
+                    <button type="button" class="btn btn-primary" onclick="led_call('red','off')">Off</button>
                 </div>
             </div>
         </div>
@@ -30,8 +30,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Test LED</h5>
-                    <button type="button" class="btn btn-primary" onclick="led_call('white','on')">On</button>
-                    <button type="button" class="btn btn-primary" onclick="led_call('white','off')">Off</button>
+                    <button type="button" class="btn btn-primary" onclick="led_call('white','on')" disabled>On</button>
+                    <button type="button" class="btn btn-primary" onclick="led_call('white','off')" disabled>Off</button>
                 </div>
             </div>
         </div>
