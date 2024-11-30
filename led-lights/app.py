@@ -3,8 +3,7 @@ import RPi.GPIO as GPIO
 
 
 # GPIO.cleanup()
-# Testing auto reload
-# Testing auto reload
+# testing some other junk
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
