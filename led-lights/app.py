@@ -13,15 +13,24 @@ GPIO.setup(17, GPIO.OUT)
 app = Flask(__name__)
 app.debug = True
 
-print(f"Status of input 17: {bool(GPIO.input(17))}")
-print(f"Status of input 18: {bool(GPIO.input(18))}")
+red_light_pin = 17
+white_light_pin = 18
+print(f"Status of input red_light: {bool(GPIO.input(red_light_pin))}")
+print(f"Status of input white_light: {bool(GPIO.input(white_light_pin))}")
 
 app_name = 'LED Lights'
 
+def on_off(pin_number):
+    bool(GPIO.input(17))
+    if bool:
+        return "on"
+    else:
+        return "off"
+
 @app.route('/')
 def home():
-    red_light_status = bool(GPIO.input(17))
-    white_light_status = bool(GPIO.input(18))
+    red_light_status = on_off(red_light_pin)
+    white_light_status = on_off(white_light_pin)
     page_title = 'LED Lights'
     return render_template('index.html', 
                             red_light_status = red_light_status,
