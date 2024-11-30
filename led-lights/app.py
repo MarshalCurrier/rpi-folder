@@ -21,8 +21,8 @@ print(f"Status of input white_light: {bool(GPIO.input(white_light_pin))}")
 app_name = 'LED Lights'
 
 def on_off(pin_number):
-    bool(GPIO.input(17))
-    if bool:
+    # bool(GPIO.input(pin_number))
+    if bool(GPIO.input(pin_number)):
         return "on"
     else:
         return "off"
