@@ -15,6 +15,7 @@ app = Flask(__name__)
 app.debug = True
 
 print(f"Status of input 17: {bool(GPIO.input(17))}")
+print(f"Status of input 18: {bool(GPIO.input(18))}")
 
 app_name = 'LED Lights'
 
